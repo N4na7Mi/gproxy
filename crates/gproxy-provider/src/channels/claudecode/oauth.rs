@@ -149,7 +149,6 @@ pub(crate) fn claudecode_access_token_from_credential(
     } else {
         explicit_access_token
     };
-
     if access_token.is_empty() && refresh_token.is_empty() && cookie.is_none() {
         return None;
     }
@@ -462,7 +461,6 @@ pub(crate) async fn refresh_claudecode_access_token(
             cookie: material.cookie.clone(),
         });
     }
-
     let cookie = material.cookie.as_deref();
 
     if !material.refresh_token.trim().is_empty() {
