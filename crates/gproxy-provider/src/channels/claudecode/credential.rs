@@ -27,7 +27,12 @@ pub struct ClaudeCodeCredential {
     pub user_email: Option<String>,
     pub account_uuid: Option<String>,
     pub organization_uuid: Option<String>,
-    #[serde(default, alias = "api_key", alias = "secret", alias = "anthropic_auth_token")]
+    #[serde(
+        default,
+        alias = "api_key",
+        alias = "secret",
+        alias = "anthropic_auth_token"
+    )]
     pub auth_token: Option<String>,
 }
 
